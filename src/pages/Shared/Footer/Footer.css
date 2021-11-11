@@ -1,0 +1,21 @@
+.newsletter input{
+outline: none;
+border: none;
+border-bottom: 3px solid red;
+border-radius: 5px;
+background: gray;
+display: block;
+width: 80%;
+margin-bottom: 15px;
+color: white;
+}
+.quick-link a {
+    text-decoration: none;
+    color: rgb(187, 187, 187);
+    display: block;
+    margin-bottom: 10px;
+}
+.quick-link a:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}

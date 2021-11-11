@@ -1,0 +1,16 @@
+.dashboard-navigation {
+    background-color: #d8d8d8;
+}
+.dashboard-navigation .navigation {
+    margin: 45px auto;
+}
+.dashboard-navigation .navigation ul li {
+    list-style: none;
+}
+.dashboard-navigation .navigation ul li a{
+    text-decoration: none;
+    color: black;
+}
+.dashboard-navigation .navigation ul li a:hover{
+    text-decoration: underline;
+}

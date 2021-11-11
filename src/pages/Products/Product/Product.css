@@ -1,0 +1,19 @@
+.product {
+    box-shadow: 2px 2px 12px rgb(212, 212, 212);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px;
+    width: 340px;
+}
+.product img {
+    width: 250px;
+    height: 155px;
+    display: block;
+    margin: 15px auto 25px;
+}
+
+@media only screen and (max-width: 678px) {
+    .product {
+        width: 100%
+    }
+}

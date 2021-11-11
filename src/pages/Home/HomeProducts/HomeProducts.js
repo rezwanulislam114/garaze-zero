@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
-import Product from '../Product/Product';
-import './Products.css'
+import Product from '../../Products/Product/Product';
 
-const Products = () => {
+const HomeProducts = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/products')
             .then(res => res.json())
-            .then(data => setProducts(data));
+            .then(data => setProducts(data.slice(0, 6)));
     }, [])
     console.log(products)
     return (
@@ -23,4 +22,4 @@ const Products = () => {
     );
 };
 
-export default Products;
+export default HomeProducts;
