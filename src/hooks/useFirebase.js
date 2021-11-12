@@ -76,7 +76,7 @@ const useFirebase = () => {
             setLoading(false)
         });
         return unsubscribe;
-    }, [])
+    }, [auth])
 
     // logout 
     const logOut = () => {
@@ -90,7 +90,7 @@ const useFirebase = () => {
     // save user to database
     const saveToDatabase = (email, displayName) => {
         const user = { email, displayName };
-        fetch('http://localhost:5000/users', {
+        fetch('https://frozen-anchorage-72328.herokuapp.com/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -102,7 +102,7 @@ const useFirebase = () => {
 
     // use effect for verify admin 
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${user.email}`)
+        fetch(`https://frozen-anchorage-72328.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])

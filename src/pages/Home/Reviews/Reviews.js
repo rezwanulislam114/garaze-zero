@@ -1,47 +1,30 @@
-import React from 'react';
-import { Carousel } from 'react-bootstrap';
+import React, { useEffect, useState } from 'react';
+import { Container } from 'react-bootstrap';
+import Carousel from 'react-elastic-carousel';
+import './Reviews.css'
 
 const Reviews = () => {
+    const [reviews, setReviews] = useState([]);
+    useEffect(() => {
+        fetch('https://frozen-anchorage-72328.herokuapp.com/reviews')
+            .then(res => res.json())
+            .then(data => setReviews(data));
+    }, [])
     return (
-        <div>
-            <Carousel>
-                <Carousel.Item>
-                    {/* <img
-                        className="d-block w-100"
-                        src="holder.js/800x400?text=First slide&bg=373940"
-                        alt="First slide"
-                    /> */}
-                    <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    {/* <img
-                        className="d-block w-100"
-                        src="holder.js/800x400?text=Second slide&bg=282c34"
-                        alt="Second slide"
-                    /> */}
-
-                    <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    {/* <img
-                        className="d-block w-100"
-                        src="holder.js/800x400?text=Third slide&bg=20232a"
-                        alt="Third slide"
-                    /> */}
-
-                    <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-            </Carousel>
-        </div>
+        <Container className="my-5">
+            <h1 className="text-center">Testimonial</h1>
+            <p className="text-center text-danger mt-3 mb-5"><i>HERE YOU CAN COME TO KNOW ABOUT OUR SITE. IT WILL HELP YOU FOR KNOWING ABOUT US.</i></p>
+            <div className="reviews">
+                <Carousel>
+                    {
+                        reviews.map(review => <div className="review" key={review._id}>
+                            <p>{review.review}</p>
+                            <h5>- <i>{review.name}</i></h5>
+                        </div>)
+                    }
+                </Carousel>
+            </div>
+        </Container>
     );
 };
 

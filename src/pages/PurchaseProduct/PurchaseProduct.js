@@ -13,7 +13,7 @@ const PurchaseProduct = () => {
     const { user } = useAuth();
 
     useEffect(() => {
-        const url = `http://localhost:5000/products/${id}`;
+        const url = `https://frozen-anchorage-72328.herokuapp.com/products/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data))
@@ -22,7 +22,7 @@ const PurchaseProduct = () => {
     const onSubmit = data => {
         data['productName'] = product.name;
         console.log(data)
-        axios.post('http://localhost:5000/orders', data)
+        axios.post('https://frozen-anchorage-72328.herokuapp.com/orders', data)
             .then(res => {
                 console.log(res)
                 if (res.data.insertedId) {

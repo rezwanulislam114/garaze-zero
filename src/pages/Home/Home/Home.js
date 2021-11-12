@@ -8,7 +8,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <HomeProducts></HomeProducts>
-            {/* <Reviews></Reviews> */}
+            <Reviews></Reviews>
         </div>
     );
 };

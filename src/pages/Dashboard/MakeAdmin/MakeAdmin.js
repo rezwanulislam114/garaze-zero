@@ -11,7 +11,7 @@ const MakeAdmin = () => {
         e.preventDefault();
         const user = { email: email }
         console.log(user)
-        fetch('http://localhost:5000/users/admin', {
+        fetch('https://frozen-anchorage-72328.herokuapp.com/users/admin', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

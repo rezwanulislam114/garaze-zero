@@ -4,13 +4,13 @@ import './ManageProducts.css'
 const ManageProducts = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://frozen-anchorage-72328.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
 
     const handleDelete = id => {
-        const url = `http://localhost:5000/products/${id}`
+        const url = `https://frozen-anchorage-72328.herokuapp.com/products/${id}`
         const confirm = window.confirm('Do you want to delete this?');
 
         if (confirm) {

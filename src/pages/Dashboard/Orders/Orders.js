@@ -6,13 +6,13 @@ const Orders = () => {
     const [products, setProducts] = useState([]);
     const { user } = useAuth();
     useEffect(() => {
-        fetch(`http://localhost:5000/orders?email=${user.email}`)
+        fetch(`https://frozen-anchorage-72328.herokuapp.com/orders?email=${user.email}`)
             .then(res => res.json())
             .then(data => setProducts(data))
-    }, [])
+    }, [user.email])
 
     const handleDelete = id => {
-        const url = `http://localhost:5000/orders/${id}`
+        const url = `https://frozen-anchorage-72328.herokuapp.com/orders/${id}`
         const confirm = window.confirm('Do you want to delete this?');
 
         if (confirm) {
