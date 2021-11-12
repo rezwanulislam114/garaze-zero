@@ -9,6 +9,7 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(true);
+    const [admin, setAdmin] = useState(false);
 
     const auth = getAuth();
 
@@ -99,6 +100,13 @@ const useFirebase = () => {
             .then()
     }
 
+    // use effect for verify admin 
+    useEffect(() => {
+        fetch(`http://localhost:5000/users/${user.email}`)
+            .then(res => res.json())
+            .then(data => setAdmin(data.admin))
+    }, [user.email])
+
     return {
         user,
         error,
@@ -106,7 +114,8 @@ const useFirebase = () => {
         loading,
         createUser,
         loginUserWithEmailandPass,
-        logOut
+        logOut,
+        admin
     }
 }
 
