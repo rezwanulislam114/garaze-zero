@@ -35,7 +35,7 @@ const Register = () => {
                 }
                 {
                     !loading && <form onSubmit={handleRegister}>
-                        <input onBlur={handleOnBlur} type="text" name="name" placeholder="Name" />
+                        <input required onBlur={handleOnBlur} type="text" name="name" placeholder="Name" />
                         <input onBlur={handleOnBlur} type="email" name="email" placeholder="Email" />
                         <input onBlur={handleOnBlur} type="password" name="password" placeholder="Password" />
                         <input onBlur={handleOnBlur} type="password" name="password2" placeholder="Confirm Password" />

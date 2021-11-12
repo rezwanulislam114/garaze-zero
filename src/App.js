@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard/Dashboard/Dashboard';
 import Home from './pages/Home/Home/Home';
 import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
 import Products from './pages/Products/Products/Products';
+import PurchaseProduct from './pages/PurchaseProduct/PurchaseProduct';
 import Footer from './pages/Shared/Footer/Footer';
 import Header from './pages/Shared/Header/Header';
 
@@ -33,6 +34,9 @@ function App() {
           </Route>
           <PrivateRoute path="/dashboard">
             <Dashboard></Dashboard>
+          </PrivateRoute>
+          <PrivateRoute path="/purchase/:id">
+            <PurchaseProduct></PurchaseProduct>
           </PrivateRoute>
         </Switch>
         <Footer></Footer>

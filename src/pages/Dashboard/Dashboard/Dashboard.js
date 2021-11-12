@@ -11,6 +11,7 @@ import DashboardHome from '../DashboardHome/DashboardHome';
 import AddProduct from '../AddProduct/AddProduct';
 import Payment from '../Payment/Payment';
 import ManageProducts from '../ManageProducts/ManageProducts';
+import Orders from '../Orders/Orders';
 
 const Dashboard = () => {
     let { path, url } = useRouteMatch();
@@ -59,6 +60,9 @@ const Dashboard = () => {
                         </Route>
                         <Route path={`${path}/manage-products`}>
                             <ManageProducts></ManageProducts>
+                        </Route>
+                        <Route path={`${path}/my-orders`}>
+                            <Orders></Orders>
                         </Route>
                     </Switch>
                 </Col>

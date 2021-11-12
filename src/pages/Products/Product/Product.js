@@ -1,8 +1,10 @@
 import React from 'react';
+import { useHistory } from 'react-router';
 import './Product.css'
 
 const Product = (props) => {
-    const { name, img, description, price } = props.product;
+    const { name, img, description, price, _id } = props.product;
+    const history = useHistory();
     return (
         <div className="product d-flex flex-column justify-content-between">
             <div>
@@ -12,7 +14,7 @@ const Product = (props) => {
             </div>
             <div>
                 <h4>$ {price}</h4>
-                <button className="btn btn-danger mt-2">Purchase</button>
+                <button onClick={() => history.replace(`/purchase/${_id}`)} className="btn btn-danger mt-2">Purchase</button>
             </div>
         </div>
     );

@@ -9,7 +9,7 @@ const HomeProducts = () => {
             .then(res => res.json())
             .then(data => setProducts(data.slice(0, 6)));
     }, [])
-    console.log(products)
+
     return (
         <Container className="my-5">
             <h1 className="text-center my-5">Choose Your Bike!</h1>
