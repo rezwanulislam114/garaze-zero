@@ -18,7 +18,7 @@ import AdminRoute from '../../AdminRoute/AdminRoute';
 import AddReview from '../AddReview/AddReview';
 
 const Dashboard = () => {
-    const { admin } = useAuth();
+    const { admin, logOut } = useAuth();
     let { path, url } = useRouteMatch();
     const activeStyle = {
         textDecoration: 'underline',
@@ -54,6 +54,11 @@ const Dashboard = () => {
                                 </ul>
                             </>
                         }
+                        <ul>
+                            <li>
+                                <button onClick={logOut} className="link">Logout</button>
+                            </li>
+                        </ul>
                     </div>
                 </Col>
                 <Col xs={12} sm={10} className="my-5">

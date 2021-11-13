@@ -7,10 +7,17 @@
 .dashboard-navigation .navigation ul li {
     list-style: none;
 }
-.dashboard-navigation .navigation ul li a{
+.dashboard-navigation .navigation ul li a, .dashboard-navigation .navigation ul li button{
     text-decoration: none;
     color: black;
 }
-.dashboard-navigation .navigation ul li a:hover{
+.dashboard-navigation .navigation ul li button {
+    margin: 0;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+.dashboard-navigation .navigation ul li a:hover, .dashboard-navigation .navigation ul li button:hover{
     text-decoration: underline;
 }
