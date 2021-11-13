@@ -2,14 +2,19 @@
     box-shadow: 2px 2px 12px rgb(212, 212, 212);
     padding: 15px;
     border-radius: 10px;
-    margin: 10px;
-    width: 340px;
+    margin: 10px 0;
+    width: 310px;
+    transition: .3s;
+}
+.product:hover {
+    box-shadow: 5px 5px 15px rgb(151, 151, 151);
 }
 .product img {
-    width: 250px;
-    height: 155px;
+    width: 280px;
+    height: 180px;
     display: block;
-    margin: 15px auto 25px;
+    margin: 5px auto 25px;
+    border-radius: 5px;
 }
 
 @media only screen and (max-width: 678px) {

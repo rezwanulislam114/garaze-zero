@@ -13,7 +13,8 @@ const Products = () => {
 
     return (
         <Container className="my-5">
-            <h1 className="text-center my-5">Choose Your Bike!</h1>
+            <h1 className="text-center mt-5">Choose Your Bike!</h1>
+            <p className="text-center text-danger mt-3 mb-5"><i>HERE YOU CAN GET ENOUGH OPTION FOR CHOSSING A BIKE. SO CHOOSE YOUR FAVURIT ONE.</i></p>
             <div className="products-container">
                 {
                     products.map(product => <Product key={product._id} product={product}></Product>)
