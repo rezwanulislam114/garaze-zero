@@ -3,7 +3,7 @@
     margin: auto;
 }
 .review {
-    height: 150px;
+    height: 240px;
     width: 100%;
     background: rgb(223, 223, 223);
     border-radius: 10px;
@@ -15,6 +15,9 @@
     padding: 10px;
     overflow: auto;
 }
+.fa-star {
+    color: rgb(248, 73, 73);
+}
 
 @media  only screen and (max-width: 768px) {
     .reviews {
@@ -22,6 +25,6 @@
     }
     .review {
         margin: 5px;
-        height: 120px;
+        height: 350px;
     }
 }

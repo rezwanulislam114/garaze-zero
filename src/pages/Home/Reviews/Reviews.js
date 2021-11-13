@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import Carousel from 'react-elastic-carousel';
+import Rating from 'react-rating';
 import './Reviews.css'
 
 const Reviews = () => {
@@ -10,6 +11,7 @@ const Reviews = () => {
             .then(res => res.json())
             .then(data => setReviews(data));
     }, [])
+    console.log(reviews)
     return (
         <Container className="my-5">
             <h1 className="text-center">Testimonial</h1>
@@ -19,7 +21,13 @@ const Reviews = () => {
                     {
                         reviews.map(review => <div className="review" key={review._id}>
                             <p>{review.review}</p>
-                            <h5>- <i>{review.name}</i></h5>
+                            <Rating
+                                readonly
+                                emptySymbol="far fa-star"
+                                fullSymbol="fas fa-star"
+                                initialRating={review.rataing}
+                            />
+                            <h5 className="mt-2">- <i>{review.name}</i></h5>
                         </div>)
                     }
                 </Carousel>
