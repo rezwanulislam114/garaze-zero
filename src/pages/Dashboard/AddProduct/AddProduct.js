@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React from 'react';
+import { Container } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
 import './AddProduct.css'
 
@@ -19,7 +20,7 @@ const AddProduct = () => {
             });
     };
     return (
-        <div className="add-product">
+        <Container className="add-product">
             <h1 className="text-center">Add New Product</h1>
             <p className="text-center text-danger mt-3 mb-5"><i>ADD NEW PRODUCT FOR TO IMPRESS VISITOR AND GROW YOUR BUSINESS</i></p>
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -29,7 +30,7 @@ const AddProduct = () => {
                 <input placeholder="Image Link" {...register("img")} />
                 <input className="btn btn-danger" type="submit" />
             </form>
-        </div>
+        </Container>
     );
 };
 

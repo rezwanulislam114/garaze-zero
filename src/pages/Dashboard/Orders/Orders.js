@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Container } from 'react-bootstrap';
 import useAuth from '../../../hooks/useAuth';
 import './Orders.css'
 
@@ -30,7 +31,7 @@ const Orders = () => {
         }
     }
     return (
-        <div>
+        <Container>
             <h1 className="text-center">My Orders</h1>
             <p className="text-center text-danger mt-3 mb-5"><i>PRODUCT THAT I ORDERD. HERE I CAN DELETE THAT I DONT WANT TO ORDER NOW.</i></p>
             <div className="orders">
@@ -41,7 +42,7 @@ const Orders = () => {
                     </div>)
                 }
             </div>
-        </div>
+        </Container>
     );
 };
 

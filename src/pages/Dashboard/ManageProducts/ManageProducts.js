@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Container } from 'react-bootstrap';
 import './ManageProducts.css'
 
 const ManageProducts = () => {
@@ -30,7 +31,7 @@ const ManageProducts = () => {
     }
 
     return (
-        <div>
+        <Container>
             <h1 className="text-center">All Products</h1>
             <p className="text-center text-danger mt-3 mb-5"><i>HERE YOU CAN SEE YOUR ALL PRODUCTS. AND YOU CAN DELETE THATS YOU DONT NEED NOW.</i></p>
             <div className="manage-products">
@@ -41,7 +42,7 @@ const ManageProducts = () => {
                     </div>)
                 }
             </div>
-        </div>
+        </Container>
     );
 };
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Container } from 'react-bootstrap';
 import useAuth from '../../../hooks/useAuth';
 import './AddReview.css'
 
@@ -34,7 +35,7 @@ const AddReview = () => {
             })
     }
     return (
-        <div>
+        <Container>
             <h1 className="text-center">Add Review</h1>
             <p className="text-center text-danger mt-3 mb-5"><i>YOU CAN ADD A REVIEW HERE. WHICH HELP OTHERS TO KNOW ABOUT US PROPERELY</i></p>
             <div className="add-review">
@@ -44,7 +45,7 @@ const AddReview = () => {
                     <button className="btn btn-danger w-100 my-3">Submit Review</button>
                 </form>
             </div>
-        </div>
+        </Container>
     );
 };
 
