@@ -16,6 +16,7 @@ import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import useAuth from '../../../hooks/useAuth';
 import AdminRoute from '../../AdminRoute/AdminRoute';
 import AddReview from '../AddReview/AddReview';
+import ManageOrders from '../ManageOrders/ManageOrders';
 
 const Dashboard = () => {
     const { admin, logOut } = useAuth();
@@ -48,6 +49,9 @@ const Dashboard = () => {
                                 </ul>
                                 <ul>
                                     <li><NavLink activeStyle={activeStyle} to={`${url}/manage-products`}>Manage All Products</NavLink></li>
+                                </ul>
+                                <ul>
+                                    <li><NavLink activeStyle={activeStyle} to={`${url}/manage-orders`}>Manage All Orders</NavLink></li>
                                 </ul>
                                 <ul>
                                     <li><NavLink activeStyle={activeStyle} to={`${url}/make-admin`}>Make Admin</NavLink></li>
@@ -87,6 +91,9 @@ const Dashboard = () => {
                         </AdminRoute>
                         <AdminRoute path={`${path}/manage-products`}>
                             <ManageProducts></ManageProducts>
+                        </AdminRoute>
+                        <AdminRoute path={`${path}/manage-orders`}>
+                            <ManageOrders></ManageOrders>
                         </AdminRoute>
                     </Switch>
                 </Col>
